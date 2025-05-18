@@ -1,0 +1,34 @@
+# Food Nutrition Anomaly Detector / גלאי אנומליות תזונתיות במזון
+
+---
+
+## English Version
+
+### Overview
+
+This Python project analyzes a food nutrition dataset to detect anomalies in calories per 100g within food categories. It visualizes category averages and highlights one anomalous item per category. The script also explains the reasons behind the anomalies based on nutrient differences.
+
+### Features
+
+- Calculates Z-scores for calories per 100g within each food category.
+- Identifies anomalies with Z-score above a threshold (default 1.1).
+- Visualizes average calories per category with anomaly highlighted.
+- Prints nutrient-level differences explaining why the item is anomalous.
+
+### Model Used
+
+This project uses the **Z-score statistical method** to detect anomalies.  
+The Z-score is calculated for calories per 100g within each food category to find items that deviate significantly from the category mean.
+
+### Dataset Requirements
+
+Your dataset CSV file (`dataSet.csv`) should include columns:
+
+| Food Name | Category | Fat (g) per 100g | Protein (g) per 100g | Carbs (g) per 100g | Water (g) per 100g | Fiber (g) per 100g | Calories per 100g |
+
+### Usage
+
+Install dependencies:
+
+```bash
+pip install pandas matplotlib seaborn scipy
